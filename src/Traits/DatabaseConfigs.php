@@ -1,6 +1,6 @@
 <?php
 
-namespace Pipen\ApiTesting\Traits;
+namespace Pipen\ApiNomenclature\Traits;
 
 trait DatabaseConfigs
 {

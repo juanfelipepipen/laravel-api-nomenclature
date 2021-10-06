@@ -1,6 +1,6 @@
 <?php
 
-namespace Pipen\ApiTesting\TestCases;
+namespace Pipen\ApiNomenclature\TestCases;
 
 class GroupTestCases
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pipen\ApiTesting\Traits;
+namespace Pipen\ApiNomenclature\Traits;
 
-use Pipen\ApiTesting\Exceptions\HttpExceptedCode;
+use Pipen\ApiNomenclature\Exceptions\HttpExceptedCode;
 
 trait ThrowHttpResponseExceptions
 {

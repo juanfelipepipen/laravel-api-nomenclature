@@ -1,6 +1,6 @@
 <?php
 
-namespace Pipen\ApiTesting\Exceptions\TemporallyStore;
+namespace Pipen\ApiNomenclature\Exceptions\TemporallyStore;
 
 use Exception;
 use JetBrains\PhpStorm\Pure;

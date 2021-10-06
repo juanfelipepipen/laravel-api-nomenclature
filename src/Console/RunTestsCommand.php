@@ -1,9 +1,9 @@
 <?php
 
-namespace Pipen\ApiTesting\Console;
+namespace Pipen\ApiNomenclature\Console;
 
 use Illuminate\Console\Command;
-use Pipen\ApiTesting\HandleTests;
+use Pipen\ApiNomenclature\HandleTests;
 
 class RunTestsCommand extends Command
 {

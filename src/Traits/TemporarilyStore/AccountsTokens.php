@@ -1,9 +1,9 @@
 <?php
 
-namespace Pipen\ApiTesting\Traits\TemporarilyStore;
+namespace Pipen\ApiNomenclature\Traits\TemporarilyStore;
 
-use Pipen\ApiTesting\Exceptions\TemporallyStore\AccountAlreadyExistsException;
-use Pipen\ApiTesting\Exceptions\TemporallyStore\AccountNotFoundException;
+use Pipen\ApiNomenclature\Exceptions\TemporallyStore\AccountAlreadyExistsException;
+use Pipen\ApiNomenclature\Exceptions\TemporallyStore\AccountNotFoundException;
 
 trait AccountsTokens
 {
@@ -18,7 +18,7 @@ trait AccountsTokens
      * @param bool   $throwIfExists
      *
      * @return void
-     * @throws \Pipen\ApiTesting\Exceptions\TemporallyStore\AccountAlreadyExistsException
+     * @throws \Pipen\ApiNomenclature\Exceptions\TemporallyStore\AccountAlreadyExistsException
      */
     protected function setAccount(string $key, int $id, string $username = '', string $password = '', string $bearerToken = '', bool $throwIfExists = true)
     {
@@ -42,7 +42,7 @@ trait AccountsTokens
      * @param string $key
      *
      * @return object
-     * @throws \Pipen\ApiTesting\Exceptions\TemporallyStore\AccountNotFoundException
+     * @throws \Pipen\ApiNomenclature\Exceptions\TemporallyStore\AccountNotFoundException
      */
     protected function getAccount(string $key): object
     {
@@ -57,7 +57,7 @@ trait AccountsTokens
      * @param string $accountName
      *
      * @return int
-     * @throws \Pipen\ApiTesting\Exceptions\TemporallyStore\AccountNotFoundException
+     * @throws \Pipen\ApiNomenclature\Exceptions\TemporallyStore\AccountNotFoundException
      */
     public function getAccountId(string $accountName): int
     {
@@ -85,8 +85,8 @@ trait AccountsTokens
      * @param string|null $bearerToken
      *
      * @return void
-     * @throws \Pipen\ApiTesting\Exceptions\TemporallyStore\AccountNotFoundException
-     * @throws \Pipen\ApiTesting\Exceptions\TemporallyStore\AccountAlreadyExistsException
+     * @throws \Pipen\ApiNomenclature\Exceptions\TemporallyStore\AccountNotFoundException
+     * @throws \Pipen\ApiNomenclature\Exceptions\TemporallyStore\AccountAlreadyExistsException
      */
     protected function updateAccount(string $key, string $username = null, string $password = null, string $bearerToken = null)
     {

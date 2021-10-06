@@ -1,11 +1,11 @@
 <?php
 /** @noinspection PhpUnused */
 
-namespace Pipen\ApiTesting\TestCases\Environment;
+namespace Pipen\ApiNomenclature\TestCases\Environment;
 
 use Illuminate\Contracts\Http\Kernel;
-use Pipen\ApiTesting\Base\ApiTestBase;
-use Pipen\ApiTesting\Traits\DatabaseConfigs;
+use Pipen\ApiNomenclature\Base\ApiTestBase;
+use Pipen\ApiNomenclature\Traits\DatabaseConfigs;
 
 class ApplicationMiddleware extends ApiTestBase
 {
@@ -31,7 +31,7 @@ class ApplicationMiddleware extends ApiTestBase
      */
     public function test_check_database_for_tests(): void
     {
-        $isUsingMiddleware = app()->make(Kernel::class)->hasMiddleware('Pipen\ApiTesting\Middleware\UseTestDatabaseMiddleware');
+        $isUsingMiddleware = app()->make(Kernel::class)->hasMiddleware('Pipen\ApiNomenclature\Middleware\UseTestDatabaseMiddleware');
 
         if (!$isUsingMiddleware) {
             throw new \Exception('The "UseTestDatabaseMiddleware" middleware has not been set in the kernel');

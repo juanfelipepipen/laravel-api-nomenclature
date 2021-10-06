@@ -1,12 +1,12 @@
 <?php
 
-namespace Pipen\ApiTesting;
+namespace Pipen\ApiNomenclature;
 
 use Illuminate\Support\ServiceProvider;
-use Pipen\ApiTesting\Console\RunTestsCommand;
-use Pipen\ApiTesting\Traits\DatabaseConfigs;
+use Pipen\ApiNomenclature\Console\RunTestsCommand;
+use Pipen\ApiNomenclature\Traits\DatabaseConfigs;
 
-class ApiTestingSuiteServiceProvider extends ServiceProvider
+class ApiNomenclatureSuiteServiceProvider extends ServiceProvider
 {
     use DatabaseConfigs;
 

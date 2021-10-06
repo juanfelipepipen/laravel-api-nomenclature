@@ -1,6 +1,6 @@
 <?php
 
-namespace Pipen\ApiTesting\Exceptions;
+namespace Pipen\ApiNomenclature\Exceptions;
 
 use Exception;
 use JetBrains\PhpStorm\Pure;

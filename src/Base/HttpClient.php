@@ -1,15 +1,15 @@
 <?php
 
-namespace Pipen\ApiTesting\Base;
+namespace Pipen\ApiNomenclature\Base;
 
 use Exception;
 use GuzzleHttp\Cookie\SetCookie;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
-use Pipen\ApiTesting\Http\HandleRequests;
-use Pipen\ApiTesting\Traits\JsonAssert;
-use Pipen\ApiTesting\Traits\TemporarilyStore\AccountsTokens;
-use Pipen\ApiTesting\Traits\ThrowHttpResponseExceptions;
+use Pipen\ApiNomenclature\Http\HandleRequests;
+use Pipen\ApiNomenclature\Traits\JsonAssert;
+use Pipen\ApiNomenclature\Traits\TemporarilyStore\AccountsTokens;
+use Pipen\ApiNomenclature\Traits\ThrowHttpResponseExceptions;
 
 class HttpClient extends \Symfony\Component\HttpFoundation\Response
 {

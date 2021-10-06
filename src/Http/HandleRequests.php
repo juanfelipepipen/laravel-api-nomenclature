@@ -1,14 +1,14 @@
 <?php
 
-namespace Pipen\ApiTesting\Http;
+namespace Pipen\ApiNomenclature\Http;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
-use Pipen\ApiTesting\Exceptions\HttpClient\HttpRequestRequiredException;
-use Pipen\ApiTesting\Exceptions\HttpClient\HttpStatusNotAssertedException;
-use Pipen\ApiTesting\Exceptions\HttpClient\UriForRequestRequiredException;
-use Pipen\ApiTesting\Traits\TemporarilyStore\AccountsTokens;
-use Pipen\ApiTesting\Traits\TemporarilyStore\MaintenanceMode;
+use Pipen\ApiNomenclature\Exceptions\HttpClient\HttpRequestRequiredException;
+use Pipen\ApiNomenclature\Exceptions\HttpClient\HttpStatusNotAssertedException;
+use Pipen\ApiNomenclature\Exceptions\HttpClient\UriForRequestRequiredException;
+use Pipen\ApiNomenclature\Traits\TemporarilyStore\AccountsTokens;
+use Pipen\ApiNomenclature\Traits\TemporarilyStore\MaintenanceMode;
 
 class HandleRequests
 {
@@ -91,7 +91,7 @@ class HandleRequests
      * @param string $routeName
      * @param array  $parameters
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
      */
     public function route(string $routeName, array $parameters = []): static
     {
@@ -106,7 +106,7 @@ class HandleRequests
      *
      * @param array $query
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
      */
     public function query(array $query = []): static
     {
@@ -120,8 +120,8 @@ class HandleRequests
      *
      * @param string $accountName
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
-     * @throws \Pipen\ApiTesting\Exceptions\TemporallyStore\AccountNotFoundException
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
+     * @throws \Pipen\ApiNomenclature\Exceptions\TemporallyStore\AccountNotFoundException
      */
     public function token(string $accountName): static
     {
@@ -134,8 +134,8 @@ class HandleRequests
     /**
      * Send GET request
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\UriForRequestRequiredException
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\UriForRequestRequiredException
      */
     public function get(): static
     {
@@ -151,8 +151,8 @@ class HandleRequests
     /**
      * Send POST request
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\UriForRequestRequiredException
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\UriForRequestRequiredException
      */
     public function post(): static
     {
@@ -168,8 +168,8 @@ class HandleRequests
     /**
      * Send PUT request
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\UriForRequestRequiredException
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\UriForRequestRequiredException
      */
     public function put(): static
     {
@@ -185,8 +185,8 @@ class HandleRequests
     /**
      * Send POST request
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\UriForRequestRequiredException
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\UriForRequestRequiredException
      */
     public function delete(): static
     {
@@ -221,10 +221,10 @@ class HandleRequests
      *
      * @param int $exceptedCode
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
      *
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\HttpRequestRequiredException
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\HttpStatusNotAssertedException
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\HttpRequestRequiredException
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\HttpStatusNotAssertedException
      */
     public function assertStatus(int $exceptedCode): static
     {
@@ -239,7 +239,7 @@ class HandleRequests
     /**
      * Set throw in assert band true
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
      */
     public function throw(): static
     {
@@ -252,7 +252,7 @@ class HandleRequests
      * Return response object
      *
      * @return \Illuminate\Http\Client\Response|null
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\HttpRequestRequiredException
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\HttpRequestRequiredException
      */
     public function response(): Response|null
     {
@@ -263,7 +263,7 @@ class HandleRequests
      * Returns the body in object array at response
      *
      * @throw
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\HttpRequestRequiredException|\Laravel\Octane\Exceptions\DdException
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\HttpRequestRequiredException|\Laravel\Octane\Exceptions\DdException
      */
     public function object(): object
     {
@@ -276,7 +276,7 @@ class HandleRequests
      * Returns the body at response
      *
      * @throw
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\HttpRequestRequiredException|\Laravel\Octane\Exceptions\DdException
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\HttpRequestRequiredException|\Laravel\Octane\Exceptions\DdException
      */
     public function body(): string
     {
@@ -286,7 +286,7 @@ class HandleRequests
     }
 
     /**
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\HttpRequestRequiredException
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\HttpRequestRequiredException
      * @throws \Laravel\Octane\Exceptions\DdException
      */
     private function dumpResponseBody(string $type)
@@ -303,7 +303,7 @@ class HandleRequests
      * Check all parameters before send a requests
      *
      * @return void
-     * @throws \Pipen\ApiTesting\Exceptions\HttpClient\UriForRequestRequiredException
+     * @throws \Pipen\ApiNomenclature\Exceptions\HttpClient\UriForRequestRequiredException
      */
     public function authorizeRequests(): void
     {
@@ -316,7 +316,7 @@ class HandleRequests
     /**
      * Dump request or response
      *
-     * @return \Pipen\ApiTesting\Http\HandleRequests
+     * @return \Pipen\ApiNomenclature\Http\HandleRequests
      */
     public function dd(): static
     {

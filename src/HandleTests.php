@@ -1,9 +1,9 @@
 <?php
 
-namespace Pipen\ApiTesting;
+namespace Pipen\ApiNomenclature;
 
 use Throwable;
-use Pipen\ApiTesting\TestCases\Environment\ApplicationMiddleware;
+use Pipen\ApiNomenclature\TestCases\Environment\ApplicationMiddleware;
 
 class HandleTests
 {

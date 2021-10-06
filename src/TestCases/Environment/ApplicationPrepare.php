@@ -1,12 +1,12 @@
 <?php
 /** @noinspection ALL */
 
-namespace Pipen\ApiTesting\TestCases\Environment;
+namespace Pipen\ApiNomenclature\TestCases\Environment;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Artisan;
-use Pipen\ApiTesting\Base\ApiTestBase;
-use Pipen\ApiTesting\Traits\TemporarilyStore\MaintenanceMode;
+use Pipen\ApiNomenclature\Base\ApiTestBase;
+use Pipen\ApiNomenclature\Traits\TemporarilyStore\MaintenanceMode;
 
 class ApplicationPrepare extends ApiTestBase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pipen\ApiTesting\Base;
+namespace Pipen\ApiNomenclature\Base;
 
 use Illuminate\Foundation\Testing\WithFaker;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pipen\ApiTesting\Middleware;
+namespace Pipen\ApiNomenclature\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Pipen\ApiTesting\Traits\DatabaseConfigs;
+use Pipen\ApiNomenclature\Traits\DatabaseConfigs;
 
 class UseTestDatabaseMiddleware
 {

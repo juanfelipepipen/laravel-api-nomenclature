@@ -15,13 +15,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Pipen\\ApiTesting\\": "src/"
+      "Pipen\\ApiNomenclature\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Pipen\\ApiTesting\\ApiTestingSuiteServiceProvider"
+        "Pipen\\ApiNomenclature\\ApiNomenclatureSuiteServiceProvider"
       ]
     }
   }

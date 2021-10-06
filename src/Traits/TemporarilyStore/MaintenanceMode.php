@@ -1,6 +1,6 @@
 <?php
 
-namespace Pipen\ApiTesting\Traits\TemporarilyStore;
+namespace Pipen\ApiNomenclature\Traits\TemporarilyStore;
 
 use Illuminate\Support\Facades\Http;
 

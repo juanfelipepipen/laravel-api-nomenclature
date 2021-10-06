@@ -1,10 +1,10 @@
 <?php
 /** @noinspection PhpUnused */
 
-namespace Pipen\ApiTesting\TestCases\Environment;
+namespace Pipen\ApiNomenclature\TestCases\Environment;
 
 use Illuminate\Support\Facades\Artisan;
-use Pipen\ApiTesting\Base\ApiTestBase;
+use Pipen\ApiNomenclature\Base\ApiTestBase;
 
 class ApplicationRevive extends ApiTestBase
 {
