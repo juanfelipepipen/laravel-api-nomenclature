@@ -3,7 +3,6 @@
 namespace Pipen\ApiNomenclature\Exceptions\Responder\Enum;
 
 use JetBrains\PhpStorm\Pure;
-use Pipen\ApiNomenclature\Exceptions\ApiNomenclatureException;
 
 class EnumClassNotFoundException extends ApiNomenclatureException
 {
