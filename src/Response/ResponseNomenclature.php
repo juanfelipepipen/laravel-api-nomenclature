@@ -21,7 +21,7 @@ class ResponseNomenclature
      */
     public function __construct()
     {
-
+        // TODO.
     }
 
     public function setJsonResponse(JsonResponse $jsonResponse): void

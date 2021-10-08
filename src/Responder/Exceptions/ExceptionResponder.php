@@ -23,9 +23,9 @@ trait ExceptionResponder
     {
         $exceptionExists = new $exceptionClass();
 
-        if ($condition) {
-
-        }
+//        if ($condition) {
+//
+//        }
     }
 
     /**

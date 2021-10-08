@@ -22,7 +22,7 @@ class ApiNomenclatureSuiteServiceProvider extends ServiceProvider
         // Register the command if we are using the application via the CLI
         if ($this->app->runningInConsole()) {
             $this->commands([
-                //
+                // TODO.
             ]);
         }
     }
@@ -33,5 +33,8 @@ class ApiNomenclatureSuiteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register(): void { }
+    public function register(): void
+    {
+        // TODO.
+    }
 }

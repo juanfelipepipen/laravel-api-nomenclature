@@ -41,9 +41,8 @@ trait ResponseNomenclaturePreparation
      *
      * @return \Pipen\ApiNomenclature\Response\ResponseNomenclaturePreparation
      *
-     * @throws \Pipen\ApiNomenclature\Exceptions\Responder\Enum\EnumClassNotFoundException
-     * @throws \Pipen\ApiNomenclature\Exceptions\Responder\Enum\MethodInEnumNotExistException
-     * @throws \Pipen\ApiNomenclature\Exceptions\Responder\Enum\EnumResponseFormatIncorrectException
+     *
+     * @throws \Pipen\ApiNomenclature\Exceptions\ApiNomenclatureException
      */
     public function nomenclatureEnum(string $enumClass, string $enumMethod, array $arguments): static
     {

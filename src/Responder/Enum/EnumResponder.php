@@ -3,11 +3,11 @@
 namespace Pipen\ApiNomenclature\Responder\Enum;
 
 use Illuminate\Http\JsonResponse;
-use Throwable;
 use Pipen\ApiNomenclature\Exceptions\Responder\Enum\EmumResponseFormatIncorrectException;
 use Pipen\ApiNomenclature\Exceptions\Responder\Enum\EnumClassNotFoundException;
 use Pipen\ApiNomenclature\Exceptions\Responder\Enum\EnumResponseFormatIncorrectException;
 use Pipen\ApiNomenclature\Exceptions\Responder\Enum\MethodInEnumNotExistException;
+use Throwable;
 
 trait EnumResponder
 {
@@ -21,13 +21,12 @@ trait EnumResponder
      * @param string $enumClass
      *
      * @return void
-     * @throws \Pipen\ApiNomenclature\Exceptions\Responder\Enum\EnumClassNotFoundException
      */
     public function addEnum(string $enumClass): void
     {
-        if ($this->validateEnumClass($enumClass)) {
-            $this->enum = $enumClass();
-        }
+//        if ($this->validateEnumClass($enumClass)) {
+//            $this->enum = $enumClass();
+//        }
     }
 
     /**
@@ -39,6 +38,7 @@ trait EnumResponder
      */
     public function addEnums(array $enums): void
     {
+        // TODO.
     }
 
     /**
@@ -49,13 +49,11 @@ trait EnumResponder
      * @param array  $arguments
      *
      * @return \Illuminate\Http\JsonResponse
-     * @throws \Pipen\ApiNomenclature\Exceptions\Responder\Enum\EnumClassNotFoundException
-     * @throws \Pipen\ApiNomenclature\Exceptions\Responder\Enum\MethodInEnumNotExistException
-     * @throws \Pipen\ApiNomenclature\Exceptions\Responder\Enum\EnumResponseFormatIncorrectException
+     * @throws \Pipen\ApiNomenclature\Exceptions\ApiNomenclatureException
      */
     public function prepareEnum(string $enumClass, string $enumMethod, array $arguments): JsonResponse
     {
-        $this->validateEnumClass($enumClass, $enumMethod, throw: true);
+        $this->validateEnumClass($enumClass, $enumMethod, throw : true);
 
         $enumInstance = new $enumClass();
         $response     = call_user_func_array([$enumInstance, $enumMethod], $arguments);
@@ -75,8 +73,7 @@ trait EnumResponder
      * @param bool   $throw
      *
      * @return bool
-     * @throws \Pipen\ApiNomenclature\Exceptions\Responder\Enum\EnumClassNotFoundException
-     * @throws \Pipen\ApiNomenclature\Exceptions\Responder\Enum\MethodInEnumNotExistException
+     * @throws \Pipen\ApiNomenclature\Exceptions\ApiNomenclatureException
      */
     protected function validateEnumClass(string $class, string $method, bool $throw = false): bool
     {
