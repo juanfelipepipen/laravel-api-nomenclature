@@ -12,9 +12,9 @@ class ResponseNomenclature
     protected mixed $value;
 
     /**
-     * @var JsonResponse $json
+     * @var JsonResponse|null $json
      */
-    protected JsonResponse $json;
+    protected JsonResponse|null $json;
 
     /**
      * Class constructor
@@ -24,7 +24,7 @@ class ResponseNomenclature
         // TODO.
     }
 
-    public function setJsonResponse(JsonResponse $jsonResponse): void
+    public function setJsonResponse(JsonResponse|null $jsonResponse): void
     {
         $this->json = $jsonResponse;
     }
@@ -40,9 +40,9 @@ class ResponseNomenclature
     }
 
     /**
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\JsonResponse|null
      */
-    public function getJson(): JsonResponse
+    public function getJson(): JsonResponse|null
     {
         return $this->json;
     }

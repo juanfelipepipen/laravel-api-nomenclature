@@ -12,12 +12,12 @@ trait ResponseNomenclaturePreparation
     /**
      * @var mixed $enumResponseValue
      */
-    protected mixed $enumResponseValue;
+    protected mixed $enumResponseValue = null;
 
     /**
-     * @var JsonResponse $enumResponseJson
+     * @var JsonResponse|null $enumResponseJson
      */
-    protected JsonResponse $enumResponseJson;
+    protected JsonResponse|null $enumResponseJson = null;
 
     /**
      * Set value at method response got
