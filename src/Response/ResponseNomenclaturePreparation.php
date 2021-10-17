@@ -20,6 +20,27 @@ trait ResponseNomenclaturePreparation
     protected JsonResponse|null $enumResponseJson = null;
 
     /**
+     * Prepare nomenclature response complete
+     *
+     * @param mixed|null $value
+     * @param array      $enum
+     * @param array      $enumArgs
+     *
+     * @return \Pipen\ApiNomenclature\Response\ResponseNomenclature
+     * @throws \Pipen\ApiNomenclature\Exceptions\ApiNomenclatureException
+     */
+    public function nomenclature(mixed $value = null, array $enum = [], array $enumArgs = []): ResponseNomenclature
+    {
+        // Set value
+        $this->nomenclatureValue($value);
+
+        // Set enum response
+        if (sizeof($enum) == 2) $this->nomenclatureEnum($enum[0], $enum[1], $enumArgs);
+
+        return $this->nomenclatureResponse();
+    }
+
+    /**
      * Set value at method response got
      *
      * @param mixed $value
