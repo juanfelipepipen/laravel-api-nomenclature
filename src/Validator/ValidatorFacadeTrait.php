@@ -22,7 +22,7 @@ trait ValidatorFacadeTrait
         $validator = Validator::make($data, $rules, $messages, $customAttributes);
 
         if ($validator->fails()) {
-            throw new InvalidArgumentException($validator->errors());
+            throw new InvalidArgumentException($validator->errors(), 422);
         }
     }
 }
