@@ -10,14 +10,16 @@ trait ValidatorFacadeTrait
     /**
      * Facade for validator make
      *
+     * @param array $data
      * @param array $rules
-     * @param array $params
+     * @param array $messages
+     * @param array $customAttributes
      *
      * @return void
      */
-    public function validator(array $params, array $rules)
+    public function validator(array $data, array $rules, array $messages = [], array $customAttributes = []): void
     {
-        $validator = Validator::make($params, $rules);
+        $validator = Validator::make($data, $rules, $messages, $customAttributes);
 
         if ($validator->fails()) {
             throw new InvalidArgumentException($validator->errors());
