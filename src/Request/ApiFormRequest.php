@@ -6,6 +6,7 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest as LaravelFormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\ValidationException;
+use Pipen\ApiNomenclature\Response\EnumResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 abstract class ApiFormRequest extends LaravelFormRequest
@@ -37,11 +38,11 @@ abstract class ApiFormRequest extends LaravelFormRequest
         $errors = (new ValidationException($validator))->errors();
 
         throw new HttpResponseException(
-            response()->json([
-                'data' => [
-                    'errors' => $errors
-                ]
-            ], Response::HTTP_UNPROCESSABLE_ENTITY)
+            EnumResponse::apiResponse('Data errors',
+                'http_unprocessable_entity',
+                Response::HTTP_UNPROCESSABLE_ENTITY,
+                $errors
+            )
         );
     }
 }
