@@ -15,9 +15,9 @@ trait ValidatorFacadeTrait
      *
      * @return void
      */
-    public function validator(array $rules, array $params)
+    public function validator(array $params, array $rules)
     {
-        $validator = Validator::make($rules, $params);
+        $validator = Validator::make($params, $rules);
 
         if ($validator->fails()) {
             throw new InvalidArgumentException($validator->errors());
