@@ -41,7 +41,9 @@ abstract class ApiFormRequest extends LaravelFormRequest
             EnumResponse::apiResponse('Data errors',
                 'http_unprocessable_entity',
                 Response::HTTP_UNPROCESSABLE_ENTITY,
-                $errors
+                [
+                    'errors' => $errors
+                ]
             )
         );
     }
